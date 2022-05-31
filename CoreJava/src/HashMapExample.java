@@ -8,6 +8,8 @@ public class HashMapExample {
 		hm.put(1, "GoodBye");
 		hm.put(2, "morning");
 		hm.put(3, "evening");
+		hm.put(3, "afternoon");
+		System.out.println(hm);
 		System.out.println(hm.get(2));
 	}
 
