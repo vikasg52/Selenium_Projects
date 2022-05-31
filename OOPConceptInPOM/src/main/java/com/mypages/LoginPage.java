@@ -11,7 +11,7 @@ public class LoginPage extends BasePage {
 	private By emailId = By.id("username");
 	private By password = By.id("password");
 	private By loginButton = By.id("loginBtn");
-	private By header = By.xpath("//");
+	private By header = By.xpath("//i18n-string[@data-key='login.form.button']");
 
 	public LoginPage(WebDriver driver) {
 		super(driver);
@@ -40,8 +40,8 @@ public class LoginPage extends BasePage {
 		return getPageTitle();
 	}
 
-	public void getLoginPageHeader() {
-		getPageHeader(header);
+	public String getLoginPageHeader() {
+		return getPageHeader(header);
 	}
 
 	public HomePage doLogin(String username, String pwd) {
