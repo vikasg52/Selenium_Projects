@@ -1,2 +1,1 @@
-14:31:10.128 [main] DEBUG io.netty.util.internal.ThreadLocalRandom - -Dio.netty.initialSeedUniquifier: 0x143cae6580e3821f
-14:31:50.818 [main] INFO  resources.Base - Non restricted user
+17:45:31.582 [TestNG-tests-3] INFO  resources.Base - Non restricted user
