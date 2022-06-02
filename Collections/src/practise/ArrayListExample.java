@@ -1,4 +1,5 @@
 package practise;
+
 import java.util.ArrayList;
 import java.util.Iterator;
 
@@ -22,9 +23,8 @@ public class ArrayListExample {
 		System.out.println(a.size());
 
 		for (int i = 0; i < a.size(); i++) {
-			System.out.print(a.get(i)+" ");
+			System.out.print(a.get(i) + " ");
 		}
-
 		Employee e1 = new Employee("Santosh", 26, "QA");
 		Employee e2 = new Employee("Sandeep", 24, "Dev");
 		Employee e3 = new Employee("Tara", 31, "Admin");
