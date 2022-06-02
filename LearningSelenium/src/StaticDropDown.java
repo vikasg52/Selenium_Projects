@@ -1,4 +1,6 @@
 import java.util.List;
+import java.util.TreeSet;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -16,7 +18,7 @@ public class StaticDropDown {
 		// Dropdown with Select tag- Static
 
 		WebElement staticDropdown = driver.findElement(By.id("ctl00_mainContent_DropDownListCurrency"));
-		Select dropdown = new Select(staticDropdown);
+		Select dropdown = new Select(staticDropdown); // Select class
 
 		dropdown.selectByIndex(3);
 		System.out.println(dropdown.getFirstSelectedOption().getText());
@@ -29,6 +31,15 @@ public class StaticDropDown {
 			String s = allOptions.get(i).getText();
 			System.out.println(s);
 		}
+		System.out.println("**************");
+		TreeSet<String> ts = new TreeSet<String>();
+		for (WebElement i : allOptions) {
+			ts.add(i.getText());
+		}
+		for (String i : ts) {
+			System.out.println(i);
+		}
+
 	}
 
 }

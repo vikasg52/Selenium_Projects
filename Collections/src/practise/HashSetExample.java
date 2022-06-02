@@ -1,3 +1,4 @@
+package practise;
 import java.util.HashSet;
 import java.util.Iterator;
 
@@ -12,6 +13,7 @@ public class HashSetExample {
 		hs.add("India");
 		hs.add("China");
 		hs.add("Russia");
+		hs.add(null);
 		System.out.println(hs);
 		System.out.println(hs.isEmpty());
 		System.out.println(hs.size());
