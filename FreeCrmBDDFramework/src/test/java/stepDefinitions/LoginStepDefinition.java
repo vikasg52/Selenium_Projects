@@ -22,13 +22,14 @@ public class LoginStepDefinition {
 		driver = new ChromeDriver();
 		driver.manage().window().maximize();
 		driver.get("https://www.freecrm.com/index.html");
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 	}
 
 	@When("User navigate to Login Page")
 	public void user_navigate_to_login_page() throws InterruptedException {
 		driver.findElement(
-				By.xpath("//a[@class='btn btn-primary btn-xs-2 btn-shadow btn-rect btn-icon btn-icon-left']")).click();
+				By.xpath("//a[normalize-space()='Login']")).click();
+		
 	}
 
 	@Then("user enters {string} and {string}")
