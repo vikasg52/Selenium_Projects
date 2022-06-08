@@ -39,7 +39,6 @@ public class Listeners extends Base implements ITestListener {
 			getScreenShotPath(testMethodName, driver);
 
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 	}

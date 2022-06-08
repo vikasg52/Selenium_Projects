@@ -5,8 +5,6 @@ import java.io.FileInputStream;
 import java.io.IOException;
 import java.time.Duration;
 import java.util.Properties;
-import java.util.concurrent.TimeUnit;
-
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
@@ -22,7 +20,7 @@ public class Base {
 	public WebDriver initializeDriver() throws IOException {
 		prop = new Properties();
 		// Hard Coded
-		// FileInputStream fis = new FileInputStream("C:\\Users\\GSPLK-LPA154\\eclipse-workspace\\E2EProject\\src\\main\\java\\resources\\data.properties");
+		// FileInputStream fis = new FileInputStream("");
 		// Global path
 		FileInputStream fis = new FileInputStream(
 				System.getProperty("user.dir") + "\\src\\main\\java\\resources\\data.properties");

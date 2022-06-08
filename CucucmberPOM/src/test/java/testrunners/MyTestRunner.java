@@ -1,4 +1,4 @@
-package com.qa.runner;
+package testrunners;
 
 import org.junit.runner.RunWith;
 
@@ -14,9 +14,7 @@ glue = {"com\\qa\\stepDefinitions" }, // the path of the step definition files
 		dryRun = false // to check the mapping is proper between feature file and step def file
 // tags = {"~@SmokeTest" , "~@RegressionTest", "~@End2End"}
 )
-public class TestRunner {
-	public static void main(String[] args) {
-
-	}
+public class MyTestRunner {
+	
 
 }
