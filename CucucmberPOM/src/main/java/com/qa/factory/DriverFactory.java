@@ -6,9 +6,7 @@ import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
 public class DriverFactory {
-	public WebDriver driver;
-
-	public static ThreadLocal<WebDriver> tlDriver = new ThreadLocal<>();
+	public static WebDriver driver;
 
 	public WebDriver init_driver(String browser) {
 		System.out.println("browser value is: " + browser);
@@ -30,10 +28,11 @@ public class DriverFactory {
 		}
 		driver.manage().window().maximize();
 		driver.manage().deleteAllCookies();
-		return getDriver();
+		return driver();
 	}
 
-	public static synchronized WebDriver getDriver() {
-		return tlDriver.get();
+	public static WebDriver driver() {
+		return driver;
 	}
+
 }
