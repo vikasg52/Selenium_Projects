@@ -21,6 +21,7 @@ public class Frames {
 		WebElement target = driver.findElement(By.id("droppable"));
 		a.dragAndDrop(source, target).build().perform();
 		driver.switchTo().defaultContent(); // to exit from frame
+		driver.quit();
 	}
 
 }

@@ -7,7 +7,6 @@ import org.openqa.selenium.chrome.ChromeDriver;
 public class AutoSuggestive {
 
 	public static void main(String[] args) throws InterruptedException {
-		// TODO Auto-generated method stub
 		System.setProperty("webdriver.chrome.driver", "D:\\chromedriver_win32\\chromedriver.exe");
 		WebDriver driver = new ChromeDriver();
 		driver.manage().window().maximize();
@@ -17,12 +16,8 @@ public class AutoSuggestive {
 		List<WebElement> options = driver.findElements(By.cssSelector("li[class='ui-menu-item'] a"));
 
 		for (WebElement option : options) {
-			if (option.getText().equalsIgnoreCase("India"))
-
-			{
-
+			if (option.getText().equalsIgnoreCase("India")) {
 				option.click();
-
 				break;
 
 			}
@@ -32,8 +27,9 @@ public class AutoSuggestive {
 		// To select Check Box and check box count
 
 		driver.findElement(By.cssSelector("input[name*='friendsandfamily']")).click();
-		driver.findElements(By.cssSelector("input[type='checkbox']")).size();
-		System.out.println(driver.findElements(By.cssSelector("input[type='checkbox']")).size());
+		int checkboxCount = driver.findElements(By.cssSelector("input[type='checkbox']")).size();
+		System.out.println(checkboxCount);
+		driver.quit();
 
 	}
 

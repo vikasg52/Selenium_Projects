@@ -15,9 +15,10 @@ public class ExplicictWait {
 		driver.get("http://www.itgeared.com/demo/1506-ajax-loading.html");
 		driver.findElement(By.xpath("//a[contains(text(),'Click to load get data via Ajax!')]")).click();
 		// Thread.sleep(3000);
-		WebDriverWait s = new WebDriverWait(driver,Duration.ofSeconds(10));
-		s.until(ExpectedConditions.elementToBeClickable(By.cssSelector("div[id='results']")));
+		WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(10));
+		wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("div[id='results']")));
 		System.out.println(driver.findElement(By.cssSelector("div[id='results']")).getText());
+		driver.quit();
 
 	}
 
