@@ -18,7 +18,7 @@ public class FrequencyCharacter {
 		}
 		for (int i = 0; i < freq.length; i++) {
 			if (string[i] != ' ' && string[i] != '0') {
-				System.out.println(string[i] + "-" + freq[i]);
+				System.out.println(string[i] + "---->" + freq[i]);
 			}
 		}
 	}

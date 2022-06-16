@@ -11,11 +11,11 @@ public class MissingNumber {
 		for (int i = 0; i < arr.length; i++) {
 			sum = sum + arr[i];
 		}
-		for (int i = 1; i <= 9; i++) {
+		for (int i = 1; i < 10; i++) {
 			expectedsum = expectedsum + i;
 		}
 		System.out.println(Arrays.toString(arr));
-		System.out.println("The missing Number is:" + (expectedsum - sum));
+		System.out.println("The missing Number is: " + (expectedsum - sum));
 
 	}
 
