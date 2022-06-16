@@ -31,6 +31,7 @@ public class StaticDropDown {
 			String s = allOptions.get(i).getText();
 			System.out.println(s);
 		}
+		// Sort in Alphabets order
 		System.out.println("**************");
 		TreeSet<String> ts = new TreeSet<String>();
 		for (WebElement i : allOptions) {

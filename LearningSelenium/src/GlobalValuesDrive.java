@@ -7,7 +7,7 @@ public class GlobalValuesDrive {
 
 	public static void main(String[] args) throws IOException {
 		FileInputStream fis = new FileInputStream(
-				"C:\\Users\\santo\\eclipse-workspace\\Selenium_Projects\\LearningSelenium\\src\\data.properties");
+				"C:\\Users\\santo\\eclipse-workspace\\LearningSelenium\\src\\data.properties");
 		Properties prop = new Properties();
 		prop.load(fis);
 		System.out.println(prop.getProperty("browser"));
@@ -15,7 +15,7 @@ public class GlobalValuesDrive {
 		prop.setProperty("browser", "Firefox");
 		System.out.println(prop.getProperty("browser"));
 		FileOutputStream fos = new FileOutputStream(
-				"C:\\Users\\santo\\eclipse-workspace\\Selenium_Projects\\LearningSelenium\\src\\data.properties");
+				"C:\\Users\\santo\\eclipse-workspace\\LearningSelenium\\src\\data.properties");
 		prop.store(fos, null);
 	}
 
