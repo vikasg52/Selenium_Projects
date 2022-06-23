@@ -41,7 +41,7 @@ public class Day4 {
 		System.out.println("MobileloginCar");
 	}
 
-	@Test(enabled = false)
+	@Test(enabled = false)	// to skip test case
 	public void MobilesigninCarLoan() {
 		System.out.println("Mobile Sign In");
 	}

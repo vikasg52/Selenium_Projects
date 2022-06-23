@@ -2,6 +2,7 @@ package com.qa.utils;
 
 import java.io.FileInputStream;
 import java.io.IOException;
+import java.time.Duration;
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 
@@ -15,10 +16,9 @@ public class TestBase {
 	public Properties prop;
 
 	public WebDriver initializeDriver() throws IOException {
-		prop = new Properties();
-		
 		FileInputStream fis = new FileInputStream(
 				System.getProperty("user.dir") + "\\src\\main\\java\\com\\qa\\config\\config.properties");
+		prop = new Properties();
 		prop.load(fis);
 		String browserName = prop.getProperty("browser");
 		System.out.println(browserName);
@@ -28,16 +28,12 @@ public class TestBase {
 			driver = new ChromeDriver();
 		} else if (browserName.equals("firefox")) {
 			// execute in firefox browser
-			System.setProperty("webdriver.gecko.driver", "D:\\chromedriver_win32\\geckodriver");
+			System.setProperty("webdriver.gecko.driver", "D:\\geckodriver.exe");
 			driver = new FirefoxDriver();
-		} else if (browserName.equals("IE")) {
-			// execute in IE browser
-			System.setProperty("webdriver.edge.driver", "D:\\chromedriver_win32\\msedgedriver");
-			driver = new EdgeDriver();
 		}
 		driver.manage().window().maximize();
 		driver.manage().deleteAllCookies();
-		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 		return driver;
 	}
 
