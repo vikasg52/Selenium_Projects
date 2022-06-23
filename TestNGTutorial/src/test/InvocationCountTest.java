@@ -3,7 +3,8 @@ package test;
 import org.testng.annotations.Test;
 
 public class InvocationCountTest {
-	@Test(invocationCount=5)
+	
+	@Test(invocationCount = 5)
 	public void sum() {
 		int a = 10;
 		int b = 20;

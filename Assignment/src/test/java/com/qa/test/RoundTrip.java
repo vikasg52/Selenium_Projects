@@ -30,21 +30,21 @@ public class RoundTrip extends TestBase {
 				.click();
 
 		// Select From Date
-		driver.findElement(By.xpath("(//h4[text()='Depart on']/../../..//button)[1]")).click();
-		driver.findElement(By.xpath("//div[@aria-label='Sat Feb 19 2022']")).click();
-		driver.findElement(By.xpath("//div[@aria-label='Sat Feb 19 2022']")).click();
+//		driver.findElement(By.xpath("(//h4[text()='Depart on']/../../..//button)[1]")).click();
+//		driver.findElement(By.xpath("//div[@aria-label='Sat Feb 19 2022']")).click();
+//		driver.findElement(By.xpath("//div[@aria-label='Sat Feb 19 2022']")).click();
 
 		// Select To Date
-		driver.findElement(By.xpath("(//h4[text()='Depart on']/../../..//button)[2]")).click();
-		driver.findElement(By.xpath("//div[@aria-label='Mon Feb 21 2022']")).click();
+//		driver.findElement(By.xpath("(//h4[text()='Depart on']/../../..//button)[2]")).click();
+//		driver.findElement(By.xpath("//div[@aria-label='Mon Feb 21 2022']")).click();
 
 		// Select 3 Adult
-		WebElement adult = driver.findElement(By.xpath("//h4[text()='Adults']/../select"));
+		WebElement adult = driver.findElement(By.xpath("//h4[text()='Adults']/..//select"));
 		Select adultDropdown = new Select(adult);
 		adultDropdown.selectByValue("3");
 
 		// Select 1 Children
-		WebElement children = driver.findElement(By.xpath("//h4[text()='Children']/../select"));
+		WebElement children = driver.findElement(By.xpath("//h4[text()='Children']/..//select"));
 		Select childrenDropdown = new Select(children);
 		childrenDropdown.selectByValue("1");
 

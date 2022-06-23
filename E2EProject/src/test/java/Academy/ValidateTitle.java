@@ -31,16 +31,15 @@ public class ValidateTitle extends Base {
 		// creating object to that class and invoke methods of it
 		l = new LandingPage(driver);
 		// compare the text from the browser with actual text.- Error..
-		Assert.assertEquals(l.getTitle().getText(), "FEATURED C123OURSES");
+		Assert.assertEquals(l.getTitle().getText(), "FEATURED COURSES");
 		log.info("successfully validated Text message");
 	}
 
 	@Test
-
 	public void validateHeader() throws IOException {
 
 //System.out.println("am i going inside it");
-		Assert.assertEquals(l.getheader().getText(), "An Academy to learn Everything about Testing");
+		Assert.assertEquals(l.getheader().getText(), "AN ACADEMY TO LEARN EVERYTHING ABOUT TESTING");
 	}
 
 	@AfterTest

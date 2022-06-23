@@ -37,7 +37,7 @@ public class HomePage extends Base {
 	}
 
 	@DataProvider
-	public Object[][] getData() {
+	public Object[][] getData() {	//method
 		// Row stands for how many different data types test should run
 		// coloumn stands for how many values per each test
 
